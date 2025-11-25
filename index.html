@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Share Tech Mono', monospace; /* Police rétro par défaut */
+  background-color: #000;
+  color: white;
+}
+
+/* Animation scanline pour l'effet écran */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
