@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Configuration globale du corps de la page */
+body {
+  font-family: 'Share Tech Mono', monospace; /* Police rétro par défaut */
+  background-color: #000; /* Fond noir absolu */
+  color: white; /* Texte blanc par défaut */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* --- Barre de défilement personnalisée (Scrollbar) --- */
+/* Pour donner un look plus "système informatique" */
+
+/* Largeur de la barre */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Fond de la barre (piste) */
+::-webkit-scrollbar-track {
+  background: #0f172a; /* Slate-900 */
+}
+
+/* La barre elle-même (pouce) */
+::-webkit-scrollbar-thumb {
+  background: #334155; /* Slate-700 */
+  border-radius: 4px;
+}
+
+/* La barre au survol */
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* Slate-600 */
+}
+
+/* --- Animations Personnalisées --- */
+
+/* Animation "Scanline" pour l'effet écran cathodique */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Classe utilitaire pour l'effet de secousse (Shake) */
+.animate-shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-4px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(4px);
+  }
+}
